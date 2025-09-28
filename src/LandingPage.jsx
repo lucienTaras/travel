@@ -24,18 +24,32 @@ export default function LandingPage(){
   const [result,setResult]=React.useState(null)
   const reduceMotion=useReducedMotion()
   const handleChange=e=>setForm({...form,[e.target.name]:e.target.value})
-  const handleSubmit=async e=>{
-    e.preventDefault()
-    if(form.website) return
-    setSubmitting(true); setResult(null)
-    try{
-      const res=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:form.name.trim(),email:form.email.trim(),company:form.company.trim(),message:form.message.trim()})})
-      if(!res.ok) throw new Error()
-      setResult({ok:true,msg:\"Thanks! We’ll get back to you within 1 business day.\"})
-      setForm({name:'',email:'',company:'',message:'',website:''})
-    }catch(e){ setResult({ok:false,msg:\"Something went wrong. Please email lucien@devio.co.za.\"}) }
-    finally{ setSubmitting(false) }
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  if (form.website) return;
+  setSubmitting(true);
+  setResult(null);
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        company: form.company.trim(),
+        message: form.message.trim(),
+      }),
+    });
+    if (!res.ok) throw new Error();
+    setResult({ ok: true, msg: "Thanks! We’ll get back to you within 1 business day." });
+    setForm({ name: '', email: '', company: '', message: '', website: '' });
+  } catch (e) {
+    setResult({ ok: false, msg: "Something went wrong. Please email lucien@devio.co.za." });
+  } finally {
+    setSubmitting(false);
   }
+};
+
 
   return (<div className='min-h-screen bg-gradient-to-b from-brand-ivory to-white text-brand-ink font-sans'>
     <nav className='sticky top-0 z-50 backdrop-blur bg-white/70 border-b'>
