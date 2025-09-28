@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input, Textarea } from '@/components/ui/input'
+import { Button } from './components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card'
+import { Input, Textarea } from './components/ui/input'
 
 const KPI_CARDS=[{kpi:'24/7',label:'lead capture & answers'},{kpi:'30-50%',label:'faster response time'},{kpi:'10-20%',label:'uplift in cross-sell'}]
 const PRICING_TIERS=[
