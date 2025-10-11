@@ -76,6 +76,7 @@ export default function TarasHome() {
             <a href="https://calendar.app.google/9Lg9BzZy97jv3poHA" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-2xl bg-[#A85C32] text-white px-4 py-2">
               Book strategy call
             </a>
+            <a href="/travel" className="hover:text-[#A85C32]">Travel AI</a>
           </div>
         </div>
       </nav>
