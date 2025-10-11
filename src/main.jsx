@@ -1,10 +1,10 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/index.css'
-import TarasHome from './TarasHome'
+import LandingPage from './LandingPage'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <TarasHome />
+    <LandingPage />
   </React.StrictMode>
 )
