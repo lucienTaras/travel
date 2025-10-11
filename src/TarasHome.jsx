@@ -1,6 +1,8 @@
 // src/TarasHome.jsx
 import React from "react"
 
+
+import { Link } from 'react-router-dom';
 const SECTORS = [
   {
     name: "Retail & eCommerce",
@@ -192,15 +194,20 @@ export default function TarasHome() {
           Every sector is being reshaped by AI. The companies that win will blend human expertise with AI copilots and automation. Here’s where our clients start:
         </p>
         <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SECTORS.map(s => (
-            <div key={s.name} className="rounded-2xl border bg-white p-5 shadow-sm">
-              <div className="font-semibold">{s.name}</div>
-              <div className="text-slate-600 text-sm mt-1">{s.pain}</div>
-              <ul className="mt-3 text-sm list-disc list-inside space-y-1">
-                {s.wins.map(w => <li key={w}>{w}</li>)}
-              </ul>
-            </div>
-          ))}
+          {SECTORS.map(s => {
+            const Card = (
+              <div key={s.name} className="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition">
+                <div className="font-semibold">{s.name}</div>
+                <div className="text-slate-600 text-sm mt-1">{s.pain}</div>
+                <ul className="mt-3 text-sm list-disc list-inside space-y-1">
+                  {s.wins.map(w => <li key={w}>{w}</li>)}
+                </ul>
+              </div>
+            );
+            return s.name === 'Hospitality & Tourism'
+              ? (<Link key={s.name} to="/travel" className="block focus:outline-none focus:ring-2 focus:ring-[#A85C32] rounded-2xl">{Card}</Link>)
+              : Card;
+          })}
         </div>
       </section>
 
