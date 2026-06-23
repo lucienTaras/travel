@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Button } from './components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card'
@@ -199,7 +200,7 @@ export default function LandingPage(){
     <footer className='border-t bg-white/60'>
       <Section className='py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600'>
         <div>© {new Date().getFullYear()} TARAS. All rights reserved.</div>
-        <div className='flex gap-6'><a href='#' className='hover:text-[#A85C32]'>Privacy</a><a href='#' className='hover:text-[#A85C32]'>Terms</a><a href='#' className='hover:text-[#A85C32]'>Security</a></div>
+        <div className='flex gap-6'><Link to='/privacy' className='hover:text-[#A85C32]'>Privacy</Link><a href='#' className='hover:text-[#A85C32]'>Terms</a><a href='#' className='hover:text-[#A85C32]'>Security</a></div>
       </Section>
     </footer>
   </div>)
