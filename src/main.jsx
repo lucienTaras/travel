@@ -7,6 +7,7 @@ import './styles/index.css'
 // Lazy load to keep bundles light
 const TarasHome = lazy(() => import('./TarasHome'))
 const TravelLanding = lazy(() => import('./LandingPage'))
+const PrivacyPolicy = lazy(() => import('./PrivacyPolicy'))
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<TarasHome />} />
           <Route path="/travel" element={<TravelLanding />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
