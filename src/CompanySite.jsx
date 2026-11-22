@@ -268,9 +268,9 @@ function HomePage() {
   return (
     <>
       <PageHero
-        eyebrow="Founder-Led AI & Business Transformation"
-        title={<>From AI Ambition to <em>Operational Impact.</em></>}
-        description="Hands-on transformation leadership for complex organisations. I help healthcare providers, research institutions, financial services companies and risk-driven enterprises turn operational challenges into measurable improvements."
+        eyebrow="AI & Business Transformation"
+        title={<>AI Ambition to <em>Practical Impact.</em></>}
+        description="Hands-on transformation leadership for highly regulated industries. I help healthcare providers, research institutions, financial services companies and risk-management enterprises turn operational challenges into measurable improvements."
         primaryLabel="Discuss Your Transformation Challenge"
         secondaryLabel="Explore Proven Results"
         secondaryHref="/case-studies"
@@ -279,7 +279,7 @@ function HomePage() {
 
       <section className="section-block section-problem">
         <div className="site-container">
-          <SectionHeading eyebrow="The Challenge" title="You Don’t Need Another AI Strategy. You Need Someone Who Can Make It Work." description="Organisations rarely struggle because they lack technology. They struggle because processes are fragmented, data is underused and promising initiatives do not become part of daily operations." />
+          <SectionHeading eyebrow="The REALITY" title="You Don’t Need Another AI Strategy. You Need Someone Who Can Make It Work." description="Organisations rarely struggle because they lack technology. They struggle because processes are fragmented, data is underused and promising initiatives do not become part of daily operations." />
           <div className="card-grid card-grid-four">{problems.map(([title, description], index) => <article className="problem-card" key={title}><span className="problem-index">0{index + 1}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
           <p className="section-closing">Taras AI bridges the gap between technology potential and operational value.</p>
         </div>
@@ -287,7 +287,7 @@ function HomePage() {
 
       <section className="section-block section-featured">
         <div className="site-container featured-grid">
-          <div className="featured-copy"><Eyebrow>Flagship Service</Eyebrow><h2>Experienced Transformation Leadership. Without the Full-Time Appointment.</h2><p>Complex transformation needs a leader who can align business priorities, technology delivery, stakeholders and operational realities — and stay accountable through implementation.</p><ArrowLink to="/services/fractional-transformation-leadership">Explore Fractional Leadership</ArrowLink></div>
+          <div className="featured-copy"><Eyebrow>Flagship Service</Eyebrow><h2>Experienced, Flexible Transformation Leadership.</h2><p>Complex transformation needs a leader who can align business priorities, technology delivery, stakeholders and operational realities — and stay accountable through implementation.</p><ArrowLink to="/services/fractional-transformation-leadership">Explore Fractional Leadership</ArrowLink></div>
           <div className="capability-panel"><span className="panel-label">Fractional AI & Business Transformation Leadership</span><ol>{capabilities.map((capability, index) => <li key={capability}><span>0{index + 1}</span>{capability}</li>)}</ol><strong>One accountable leader. The expertise you need. A clear focus on results.</strong></div>
         </div>
       </section>
@@ -298,8 +298,8 @@ function HomePage() {
           <div className="metric-grid">
             <MetricCard metric="4×" label="Improvement in client disengagement outcomes" note="In a controlled rollout, case managers spent 76% more time on high-risk than low-risk worklists; this behaviour change contributed to the outcome compared with control." featured />
             <MetricCard metric="80+" label="Healthcare facilities reached" note="AI-driven decision-support products were operationalised across facilities in a previous role." />
-            <MetricCard metric="53%" label="Year-on-year portfolio growth" note="Within a US$49 million Digital Economy portfolio led at LexisNexis Risk Solutions; not attributed exclusively to AI." />
-            <MetricCard metric="~55%" label="Lower software staffing costs" note="Following a software delivery operating-model redesign in a previous role." />
+            <MetricCard metric="53%" label="Year-on-year portfolio growth" note="Commercial ownership and enterprise scale of a US$49 million Digital Economy portfolio." />
+            <MetricCard metric="~55%" label="Lower software staffing costs" note="Following a redesign and software outsourcing delivery model." />
           </div>
           <div className="section-end-link"><ArrowLink to="/case-studies">Explore the Case Studies</ArrowLink></div>
         </div>
