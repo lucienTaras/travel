@@ -117,7 +117,7 @@ export const industries = [
     related: '/case-studies/financial-services-growth', service: '/services/data-and-decision-intelligence',
   },
   {
-    slug: 'risk-and-data-enterprises', title: 'Risk, Compliance & Data-Intensive Enterprises', shortTitle: 'Risk & Data Enterprises',
+    slug: 'risk-and-data-enterprises', title: 'Risk, Compliance & Data-Intensive Enterprises', shortTitle: 'Risk & Compliance',
     description: 'Better decisions in high-stakes, data-intensive operations.',
     intro: 'Risk-driven organisations need decision systems that are useful, reviewable and appropriately governed. Data integration, model validation and clear human accountability are as important as predictive performance.',
     needs: ['Risk analytics and data stewardship', 'Fraud detection and model validation', 'Regulatory workflows and decision governance', 'Auditability, human oversight and data integration'],
@@ -196,12 +196,54 @@ export const caseStudies = [
 ]
 
 export const publications = [
-  { year: '2022', type: 'Peer-reviewed research', journal: 'Scientific Reports', title: 'Applying Machine Learning and Predictive Modelling to Retention and Viral Suppression in South African HIV Treatment Cohorts' },
-  { year: '2022', type: 'Peer-reviewed research', journal: 'JAIDS', title: 'Validation and Improvement of a Machine Learning Model to Predict Interruptions in Antiretroviral Treatment in South Africa' },
-  { year: '2023', type: 'Peer-reviewed research', journal: 'PLOS Global Public Health', title: 'Historical Visit Attendance as Predictor of Treatment Interruption in South African HIV Patients' },
-  { year: '2024', type: 'Preprint', journal: 'medRxiv', title: 'Triaging Clients at Risk of Disengagement From HIV Care: Application of a Predictive Model to Clinical Trial Data in South Africa' },
-  { year: '2025', type: 'Peer-reviewed research', journal: 'PLOS Global Public Health', title: 'Use of Machine Learning in Predicting Continuity of HIV Treatment in Selected Nigerian States' },
-  { year: '2025', type: 'Journal publication', journal: 'Risk Management and Healthcare Policy', title: 'Triaging Clients at Risk of Disengagement From HIV Care' },
+  {
+    year: '2022', published: '26 July 2022', type: 'Peer-reviewed research', journal: 'Scientific Reports',
+    title: 'Applying Machine Learning and Predictive Modeling to Retention and Viral Suppression in South African HIV Treatment Cohorts',
+    authors: 'Mhairi Maskew, Kieran Sharpey-Schafer, Lucien De Voux, Thomas Crompton, Jacob Bor, Marcus Rennick, Admire Chirowodza, Jacqui Miot, Seithati Molefi, Chuka Onaga, Pappie Majuba, Ian Sanne, and Pedro Pisa.',
+    doi: '10.1038/s41598-022-16062-0', href: 'https://www.nature.com/articles/s41598-022-16062-0',
+    summary: 'Applied machine learning to routine South African HIV programme data to predict clinic visit attendance and viral suppression.',
+    relevance: 'Shows how predictive signals can support earlier, risk-informed care and operational prioritisation.', relatedCaseStudy: '/case-studies/healthcare-ai-adoption',
+  },
+  {
+    year: '2022', published: '3 October 2022', type: 'Peer-reviewed research', journal: 'Journal of Acquired Immune Deficiency Syndromes (JAIDS)',
+    title: 'Validation and Improvement of a Machine Learning Model to Predict Interruptions in Antiretroviral Treatment in South Africa',
+    authors: 'Rachel T. Esra, Jacques Carstens, Sue Le Roux, Tonderai Mabuto, Michael S. Eisenstein, Olivia Keiser, Erol Orel, Aziza Merzouki, Lucien De Voux, Mhairi Maskew, and Kieran Sharpey-Schafer.',
+    doi: '10.1097/QAI.0000000000003108', href: 'https://doi.org/10.1097/QAI.0000000000003108',
+    summary: 'Validated and extended predictive models for treatment interruption using South African antiretroviral therapy cohorts.',
+    relevance: 'Connects model validation with more focused retention support and treatment continuity.', relatedCaseStudy: '/case-studies/healthcare-ai-adoption',
+  },
+  {
+    year: '2023', published: '19 July 2023', type: 'Peer-reviewed research', journal: 'PLOS Global Public Health',
+    title: 'Historical Visit Attendance as Predictor of Treatment Interruption in South African HIV Patients: Extension of a Validated Machine Learning Model',
+    authors: 'Rachel T. Esra, Jacques Carstens, Janne Estill, Ricky Stoch, Sue Le Roux, Tonderai Mabuto, Michael Eisenstein, Olivia Keiser, Mhari Maskew, Matthew P. Fox, Lucien De Voux, and Kieran Sharpey-Schafer.',
+    doi: '10.1371/journal.pgph.0002105', href: 'https://journals.plos.org/globalpublichealth/article?id=10.1371/journal.pgph.0002105',
+    summary: 'Examined historical visit attendance as a signal for future treatment interruption in South African HIV care.',
+    relevance: 'Demonstrates how routine workflow history can inform proactive, human-led follow-up.', relatedCaseStudy: '/case-studies/healthcare-ai-adoption',
+  },
+  {
+    year: '2024', published: '5 August 2024', type: 'Preprint', journal: 'medRxiv',
+    title: 'Triaging Clients at Risk of Disengagement From HIV Care: Application of a Predictive Model to Clinical Trial Data in South Africa',
+    authors: 'Mhairi Maskew, Shantelle Smith, Lucien De Voux, Kieran Sharpey-Schafer, Thomas Crompton, Ashley Govender, Pedro Pisa, and Sydney Rosen.',
+    doi: '10.1101/2024.08.05.24311488', href: 'https://www.medrxiv.org/content/10.1101/2024.08.05.24311488v1',
+    summary: 'Applied a predictive model to clinical-trial data and evaluated risk-threshold and client-archetype approaches to triage.',
+    relevance: 'Explores how care teams might identify people who could benefit from support before disengagement.', relatedCaseStudy: '/case-studies/healthcare-ai-adoption',
+  },
+  {
+    year: '2025', published: '24 April 2025', type: 'Peer-reviewed research', journal: 'PLOS Global Public Health',
+    title: 'Use of Machine Learning in Predicting Continuity of HIV Treatment in Selected Nigerian States',
+    authors: 'Mukhtar Ijaiya, Erica Troncoso, Marang Mutloatse, Duruanyanwu Ifeanyi, Benjamin Obasa, Franklin Emerenini, Lucien De Voux, Thobeka Mnguni, Shantelle Parrott, Ejike Okwor, Babafemi Dare, Oluwayemisi Ogundare, Emmanuel Atuma, Molly Strachan, Ruby Fayorsey, and Kelly Curran.',
+    doi: '10.1371/journal.pgph.0004497', href: 'https://journals.plos.org/globalpublichealth/article?id=10.1371/journal.pgph.0004497',
+    summary: 'Evaluated machine-learning models for predicting interruptions in treatment using HIV programme records from four Nigerian states.',
+    relevance: 'Illustrates the role of contextual, operational data in targeting continuity-of-care support.', relatedCaseStudy: '/case-studies/healthcare-ai-adoption',
+  },
+  {
+    year: '2025', published: '16 May 2025', type: 'Peer-reviewed research', journal: 'Risk Management and Healthcare Policy',
+    title: 'Triaging Clients at Risk of Disengagement From HIV Care: Application of a Predictive Model to Clinical Trial Data in South Africa',
+    authors: 'Mhairi Maskew, Shantelle Parrott, Lucien De Voux, Kieran Sharpey-Schafer, Thomas Crompton, Ashley Christopher Govender, Pedro Terrence Pisa, and Sydney Rosen.',
+    doi: '10.2147/RMHP.S510666', href: 'https://doi.org/10.2147/RMHP.S510666',
+    summary: 'Peer-reviewed journal publication evaluating predictive triage for treatment interruption using clinical-trial data.',
+    relevance: 'Relates modelled risk to practical follow-up and treatment-continuity decisions.', relatedCaseStudy: '/case-studies/healthcare-ai-adoption',
+  },
 ]
 
 export const speaking = [

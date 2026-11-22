@@ -252,7 +252,16 @@
 .publication-meta { display: flex; flex-direction: column; gap: 5px; color: var(--teal); font-size: .68rem; font-weight: 700; }
 .publication-meta span + span { color: var(--muted); font-size: .65rem; }
 .publication-item h3 { margin: 0 0 7px; color: var(--navy); font-size: .94rem; }
+.publication-content { min-width: 0; }
 .publication-item p { margin-bottom: 7px; font-size: .77rem; }
+.publication-summary { color: var(--ink-soft); }
+.publication-authors { margin: 9px 0; }
+.publication-authors summary { color: var(--teal); font-size: .72rem; font-weight: 700; cursor: pointer; }
+.publication-authors p { margin: 6px 0 0; color: var(--muted); font-size: .71rem; line-height: 1.6; }
+.publication-relevance { color: #425661; }
+.publication-relevance strong { color: var(--navy); }
+.publication-actions { display: flex; flex-wrap: wrap; gap: 8px 17px; margin-top: 13px; }
+.publication-actions .text-link { font-size: .71rem; }
 .review-note { max-width: 900px; margin: 18px 0 0; padding: 12px 14px; background: #edf2f3; color: #596a76 !important; font-size: .73rem; }
 .speaker-card { min-height: 155px; }
 .media-item { grid-template-columns: 180px 1fr; }
@@ -361,7 +370,7 @@
   .workflow-visual { margin-top: 4px; }
   .workflow-grid { grid-template-columns: 1fr 14px 1fr; gap: 7px; }
   .workflow-node { min-height: 105px; }
-  .workflow-grid .workflow-arrow:nth-of-type(4) { display: none; }
+  .workflow-grid .workflow-arrow:nth-of-type(2) { display: none; }
   .workflow-footer { flex-wrap: wrap; }
   .hero-actions { align-items: stretch; flex-direction: column; }
   .hero-actions .button { width: 100%; }
