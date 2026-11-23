@@ -1,24 +1,21 @@
 // src/main.jsx
 import React, { Suspense, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import CompanySite from './CompanySite'
 import './styles/index.css'
 
-// Lazy load to keep bundles light
-const TarasHome = lazy(() => import('./TarasHome'))
 const TravelLanding = lazy(() => import('./LandingPage'))
-const PrivacyPolicy = lazy(() => import('./PrivacyPolicy'))
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Suspense fallback={<div style={{padding:20}}>Loading…</div>}>
+      <Suspense fallback={<div style={{ padding: 20 }}>Loading…</div>}>
         <Routes>
-          <Route path="/" element={<TarasHome />} />
           <Route path="/travel" element={<TravelLanding />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="*" element={<CompanySite />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 )

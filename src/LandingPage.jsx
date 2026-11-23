@@ -146,7 +146,7 @@ export default function LandingPage(){
         {PRICING_TIERS.map(tier=>(
           <Card key={tier.name} className={`rounded-2xl ${tier.featured?'border-[#A85C32] shadow-md':''}`}>
             <CardHeader><CardTitle className='flex items-center justify-between'>{tier.name}{tier.featured&&<span className='text-xs font-semibold text-[#A85C32]'>Popular</span>}</CardTitle>
-              <CardDescription><div className='text-2xl font-extrabold'>{tier.price}</div><div className='text-slate-600'>{tier.setup}</div></CardDescription></CardHeader>
+              <CardDescription><span className='block text-2xl font-extrabold'>{tier.price}</span><span className='block text-slate-600'>{tier.setup}</span></CardDescription></CardHeader>
             <CardContent className='grid gap-3 text-sm'>{tier.points.map(p=>(<div key={p} className='flex gap-2'>• {p}</div>))}
               <Button className='mt-2 rounded-xl w-full'>{tier.cta}</Button></CardContent>
           </Card>
